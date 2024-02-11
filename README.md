@@ -1,1 +1,2 @@
-# E-Commerce-MERN-Stack
+# E-Commerce-MERN-Stack-Project
+## Environment setup
