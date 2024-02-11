@@ -3,7 +3,7 @@ const  app= express();
 
 app.get("/test",(req,res)=>{
     res.status(200).send({
-        message:'api is working fine'
+        message:'api is working fineee'
     });
 });
 app.get("/products",(req,res)=>{
