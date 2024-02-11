@@ -5,6 +5,8 @@ const  app= express();
 app.use(morgan('dev'));
 
 const isLoggedIn =(req, res,next) =>{
+    console.log('isLoggedIn middleware');
+    next();
 
 };
 app.get("/test",(req,res)=>{
@@ -13,7 +15,7 @@ app.get("/test",(req,res)=>{
     });
 });
 
-app.get("/user",(req,res)=>{
+app.get("/api/user",isLoggedIn,(req,res)=>{
     res.status(200).send({
         message:'User Profile'
     });
