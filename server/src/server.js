@@ -5,8 +5,12 @@ const  app= express();
 app.use(morgan('dev'));
 
 const isLoggedIn =(req, res,next) =>{
-    console.log('isLoggedIn middleware');
-    next();
+    const login = false;
+    if (login){
+        next()
+    }else {
+        return res.status(401).json({message:'please login first'});
+    }
 
 };
 app.get("/test",(req,res)=>{
